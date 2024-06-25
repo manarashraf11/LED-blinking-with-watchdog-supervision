@@ -55,12 +55,12 @@ The WDGM component provides supervision for the availability of the LEDM softwar
 3. Screen recording of the simulation for the following scenarios:
    - **Positive scenario**: Checks the periodicity of the LED blinking, call of the `LED_Manage`, call of the `WDGM_MainFunction`, and refreshment of the WDGDrv. Timing evidence can be provided by using test pins toggle on the oscilloscope.
    - **note**: before building project ,comment `wdt_enable` in timer.c file.
-     [Positive Scenario](<iframe src="https://giphy.com/embed/SJdw9tcDWc6ExFyXoa" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/SJdw9tcDWc6ExFyXoa">via GIPHY</a></p>)
+     [Positive Scenario](videos/Positive scenario.gif)
 
    - **Negative scenario 1**: Comments the call of the `WDGM_MainFunction` and checks that the watchdog reset occurs after 50ms.
-     [Negative Scenario 1](videos/negative_scenario_1.mp4)
+     [Negative Scenario 1](videos/negative_scenario_1.gif)
    - **Negative scenario 2**: Comments the call of the `WDGM_AlivenessIndication` from the `LED_Manage` while the `WDGM_MainFunction` is executed periodically and checks that the watchdog reset occurs after 100ms.
-     [Negative Scenario 2](videos/negative_scenario_2.mp4)
+     [Negative Scenario 2](videos/negative_scenario_2.gif)
    - **Negative scenario 3**: Changes the periodicity of the call of the `LED_Manage` to every 5ms and checks that the watchdog reset occurs after 100ms.
-     [Negative Scenario 3](videos/negative_scenario_3.mp4)
+     [Negative Scenario 3](videos/negative_scenario_3.gif)
 
