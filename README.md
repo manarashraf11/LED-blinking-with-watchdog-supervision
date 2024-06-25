@@ -57,9 +57,10 @@ The WDGM component provides supervision for the availability of the LEDM softwar
    - **note**: before building project ,comment `wdt_enable` in timer.c file.
     ![Positive Scenario](videos/Positive_scenario.gif)
    - **Negative scenario 1**: Comments the call of the `WDGM_MainFunction` and checks that the watchdog reset occurs after 50ms.
-     ![Negative Scenario 1](videos/Negative_scenario_1.gif)
+
+    ![Negative Scenario 1](videos/Negative_scenario_1.gif)
    - **Negative scenario 2**: Comments the call of the `WDGM_AlivenessIndication` from the `LED_Manage` while the `WDGM_MainFunction` is executed periodically and checks that the watchdog reset occurs after 100ms.
-     ![Negative Scenario 2](videos/Negative_scenario_2.gif)
+   ![Negative Scenario 2](videos/Negative_scenario_2.gif)
    - **Negative scenario 3**: Changes the periodicity of the call of the `LED_Manage` to every 5ms and checks that the watchdog reset occurs after 100ms.
-     ![Negative Scenario 3](videos/Negative_scenario_3.gif)
+   ![Negative Scenario 3](videos/Negative_scenario_3.gif)
 
